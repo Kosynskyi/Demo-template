@@ -1,0 +1,32 @@
+{
+  "name": "demo-template",
+  "version": "1.0.0",
+  "description": "Gulp-powered frontend template with Sass and live reload",
+  "main": "index.js",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-tinypng-compress": "^1.2.1",
+    "gulp-watch": "^5.0.1",
+    "sass": "^1.70.0"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "up-kos",
+  "license": "ISC",
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ]
+}

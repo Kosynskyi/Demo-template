@@ -1,0 +1,140 @@
+@use "./../utils/vars.sass" as vars;
+.hero
+  min-height: 500px
+  box-shadow: -13px 19px 72.4px rgba(93, 113, 190, 0.1)
+  overflow-x: hidden
+  .header__container
+    max-width: 1170px
+    width: calc(100% - 8px);
+    margin: 0 auto
+    padding: 11px 22px 11px 28px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    border-radius: 33px
+    box-shadow: -2px 9px 37.9px rgba(197, 192, 222, 0.25)
+    backdrop-filter: blur(6px)
+    z-index: 10
+    
+    .logo
+      width: 45px
+      height: 45px
+      transition: transform 1s ease
+      &:hover
+        transform: rotate(360deg)
+        transition: transform 1s ease
+
+  .header
+    width: calc(100% - 8px);
+    position: absolute;
+    top: 0;
+    left: 2px;
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    transition: all 0.3s ease;
+    &.fixed
+      width: 100%
+      background-color: transparent
+      padding-top: 0
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 10
+      transition: all 0.3s ease
+      & .header__container
+        width: 100%
+        border-radius: 0
+    &__btn-wrapper
+      outline: 1px solid red
+      color: #000000
+      @media screen and (max-width: 992px)
+        display: grid
+        grid-template-columns: repeat(2, max-content)
+        align-items: center
+        grid-gap: 20px
+
+    &__btn
+      padding: 12px 34px
+      font-size: 16px
+      font-weight: 600
+      line-height: 1
+      display: inline-flex
+      border-radius: 30px
+      background-color: vars.$warningColor
+      @media screen and (max-width: 575px)
+        display: none
+
+  .menu
+    display: flex
+    align-items: center
+    &__list
+      display: flex
+      outline: 4px solid green
+    li
+      padding: 0 32px
+      &:last-child
+        display: none
+      a
+        font-weight: 600
+        transition: all .3s ease
+        color: #ffffff
+        position: relative
+        &:before
+          content: ""
+          position: absolute
+          left: 0
+          bottom: -4px
+          width: 0
+          height: 3px
+          border-radius: 10px
+          background-color: #FFC107
+          transition: width 0.3s ease
+        &:hover
+          color: #FFC107
+          &:before
+            width: 100%
+        &:first-child
+          padding-left: 0
+        &:last-child
+          padding-right: 0
+    @media screen and (max-width: 992px)
+      width: 100%
+      display: none
+      position: absolute
+      background-color: #ffffff
+      box-shadow: 0 6px 6px rgba(34, 74, 152, 0.3)
+      top: 67px
+      left: 0
+      z-index: 999
+      &__list
+        flex-direction: column
+        li
+          padding: 10px 0
+          text-align: center
+
+  .burger 
+    width: 30px
+    height: 25px
+    cursor: pointer
+    position: relative
+    z-index: 2
+    display: none
+    @media screen and (max-width: 992px)
+      display: block
+  .burger span
+    display: block
+    height: 3px
+    background: #ffffff
+    margin: 5px 0
+    transition: 0.4s
+
+  .burger.active span:nth-child(1) 
+    transform: rotate(45deg) translate(5px, 5px)
+
+  .burger.active span:nth-child(2) 
+    opacity: 0;
+
+  .burger.active span:nth-child(3) 
+    transform: rotate(-45deg) translate(6px, -6px)

@@ -1,0 +1,86 @@
+@use "./../utils/vars.sass" as vars;
+.footer
+  padding: 64px 0 36px
+  background-color: vars.$footerBGColor
+  z-index: 10
+
+  &__logo-wrapper
+    margin-bottom: 38px
+
+  &__navigation
+    padding-bottom: 36px
+    margin-bottom: 36px
+    border-bottom: 1px solid #3B3B3F
+    .menu
+      color: vars.$white
+      display: block
+      background-color: transparent
+      position: static
+      box-shadow: none
+      &__list
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        column-gap: 56px
+        li
+          padding: 0
+          a
+            font-size: 16px
+            font-weight: 300
+            line-height: 1
+            color: vars.$white
+            transition: all .3s ease
+      @media screen and (max-width: 1500px)
+        &__list
+          column-gap: 40px
+      @media screen and (max-width: 1200px)
+        &__list
+          column-gap: 28px
+      @media screen and (max-width: 768px)
+        &__list
+          align-items: center
+          justify-content: center
+          li
+            padding: 5px 0
+            text-align: center
+
+  &__author
+    font-size: 16px
+    font-weight: 300
+    line-height: 1
+    color: vars.$footerContactsColor
+    .company-name
+      color: vars.$white
+      font-weight: 600
+    .highlighted-text
+      color: vars.$accentColor
+    a
+      color: vars.$accentColor
+      text-decoration: underline
+
+  .back-to-top
+    width: 50px
+    height: 50px
+    display: flex
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    transition: opacity 0.3s ease, visibility 0.3s ease
+    border: 2px solid #FFC107
+    border-radius: 50%
+    background-image: url('../../img/arrow-top.svg')
+    background-size: initial
+    background-repeat: no-repeat
+    background-position: center center
+    position: fixed
+    bottom: 100px
+    right: 60px
+
+    &.visible
+      opacity: 1
+      visibility: visible
+      pointer-events: auto
+    @media screen and (max-width: 1200px)
+      right: 15px
+    @media screen and (max-width: 576px)
+      margin-top: 25px

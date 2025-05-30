@@ -1,0 +1,59 @@
+#hero-slider
+    color: #ffffff
+
+    .sp-layer
+      white-space: normal !important
+
+    .slide
+      display: flex
+      flex-direction: column
+      gap: 16px
+
+      @media screen and (max-width: 768px)
+        padding-left: 20px
+
+      &__price
+        font-size: 28px
+        font-weight: 600
+        line-height: 1.2
+        color: #FFC107
+
+      &__title
+        font-size: 40px
+        font-weight: 700
+        line-height: 1.2
+
+      &__ingredients
+        font-size: 16px
+        font-weight: 600
+
+        @media screen and (max-width: 992px)
+          max-width: 320px;
+
+      &__order
+        font-size: 28px
+        font-weight: 600
+        line-height: 1.2
+        color: #FFC107
+
+      &__delivery
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        gap: 12px
+        font-size: 20px
+        font-weight: 600
+
+      &__cta
+        width: fit-content
+        padding: 12px 34px
+        font-size: 16px
+        font-weight: 600
+        line-height: 1
+        display: inline-flex
+        border-radius: 30px
+        color: #000000
+        background-color: #FFC107
+
+        &:hover
+          background-color: #FFD900
