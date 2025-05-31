@@ -1,0 +1,71 @@
+.contacts
+  background: url("./../img/bg-contacts.webp")
+  background-attachment: fixed
+  background-repeat: no-repeat
+  background-size: cover
+  &__wrapper
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 32px
+    @media screen and (max-width: 576px)
+      grid-template-columns: 100%
+  &__information-list
+    margin: 20px 0 40px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 12px
+  &__information-item
+    display: flex
+    align-items: center
+    gap: 12px
+    a
+      display: flex
+      align-items: center
+      gap: 12px
+      cursor: pointer
+      &:hover
+        color: #FFD900
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+  &__social
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 12px
+    li
+      transition: all 0.3s ease
+      &:hover
+        transition: all 0.3s ease
+        transform: scale(1.1)
+        color: #FFD900
+  &__working-hours
+    padding: 20px
+    background-color: rgba(0,0,0,0.5)
+    border-radius: 8px
+  &__table-hours
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    gap: 20px
+  &__table-row
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: relative
+    padding: 6px 0
+    &::after
+      content: ""
+      position: absolute
+      bottom: 6px
+      left: 0
+      right: 0
+      height: 1px
+      border-bottom: 1px dotted #fff
+      z-index: 0
+  &__map
+    width: 100%
+    margin-top: 60px

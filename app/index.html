@@ -58,9 +58,6 @@
                 <a href="#menu">Menu</a>
               </li>
               <li>
-                <a href="#gallery">Gallery</a>
-              </li>
-              <li>
                 <a href="#contacts">Contacts</a>
               </li>
             </ul>
@@ -507,7 +504,6 @@
       </div>
     </section>
 
-
     <section id="menu" class="menu">
       <div class="menu__container container">
         <div class="section-subtitle">Check out our menu</div>
@@ -532,31 +528,29 @@
             Drinks
           </button>
         </div>
-        <div class="menu__items-container">
-        </div>
+        <div class="menu__items-container"></div>
       </div>
     </section>
 
     <section id="contacts" class="contacts">
       <div class="contacts__container container">
-        <div>
-          <div class="section-subtitle">Our Address</div>
-          <h2 class="section-title">Contacts</h2>
-
-          <div>
-            <ul>
-              <li>
+        <div class="contacts__wrapper">
+          <div class="contacts__content">
+            <div class="section-subtitle">Our Address</div>
+            <h2 class="section-title">Contacts</h2>
+            <ul class="contacts__information-list">
+              <li class="contacts__information-item">
                 <i class="fas fa-map-marker-alt"></i>4239 Lapeer Rd, Port
                 Hurons, MI 48060
               </li>
-              <li>
+              <li class="contacts__information-item">
                 <a href="#"><i class="fas fa-phone"></i>+1 (234) 567-89-01</a>
               </li>
-              <li>
-                <i class="far fa-clock"></i>We are open Mn-Fr: 10am - 10pm
+              <li class="contacts__information-item">
+                <i class="far fa-clock"></i>We are open from 8am
               </li>
             </ul>
-            <ul class="footer-social">
+            <ul class="contacts__social">
               <li>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
               </li>
@@ -571,41 +565,38 @@
               </li>
             </ul>
           </div>
-        </div>
-        <div>
-          <div class="contact-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.8840785320544!2d-82.49493468465671!3d42.980715479150156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88259e93ea837f03%3A0x9eaf24e841d574ed!2zNDIzOSBMYXBlZXIgUmQsIFBvcnQgSHVyb24sIE1JIDQ4MDYwLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1640107647193!5m2!1sru!2sua"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
+          <div class="contacts__working-hours">
+            <h3>Opening Hours</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et,
+              inventore hic nulla, provident laudantium voluptate ipsa eligendi
+              commodi mollitia vero animi.
+            </p>
+
+            <div class="contacts__table-row">
+              <span class="contacts__day">Monday - Friday</span>
+              <span class="contacts__time">8AM - 10PM</span>
+            </div>
+            <div class="contacts__table-row">
+              <span class="contacts__day">Saturday</span>
+              <span class="contacts__time">8AM - 12PM</span>
+            </div>
+            <div class="contacts__table-row">
+              <span class="contacts__day">Sunday</span>
+              <span class="contacts__time">8AM - 10PM</span>
+            </div>
           </div>
         </div>
 
-        <div class="working-hours">
-          <h3>Opening Hours</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et,
-            inventore hic nulla, provident laudantium voluptate ipsa eligendi
-            commodi mollitia vero animi, repudiandae quidem minima est sint
-            sapiente quas iure deleniti.
-          </p>
-          <div class="flex-row table-hours">
-            <p>Monday - Friday</p>
-            <p>8AM - 10PM</p>
-          </div>
-          <!--/.table-hours-->
-          <div class="flex-row table-hours">
-            <p>Saturday</p>
-            <p>9AM - 12PM</p>
-          </div>
-          <!--/.table-hours-->
-          <div class="flex-row table-hours">
-            <p>Sunday</p>
-            <p>9AM - 10PM</p>
-          </div>
+        <div class="contacts__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.8840785320544!2d-82.49493468465671!3d42.980715479150156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88259e93ea837f03%3A0x9eaf24e841d574ed!2zNDIzOSBMYXBlZXIgUmQsIFBvcnQgSHVyb24sIE1JIDQ4MDYwLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1640107647193!5m2!1sru!2sua"
+            height="450"
+            width="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
     </section>
@@ -639,9 +630,6 @@
                 </li>
                 <li class="links">
                   <a href="#menu"> Menu </a>
-                </li>
-                <li class="links">
-                  <a href="#gallery"> Gallery </a>
                 </li>
                 <li>
                   <a href="privacy-policy.html"> Privacy Policy </a>
