@@ -1,11 +1,11 @@
-@use "./../utils/vars.sass" as vars;
+@use "./../utils/vars.sass" as vars
 .hero
   min-height: 500px
   box-shadow: -13px 19px 72.4px rgba(93, 113, 190, 0.1)
   overflow-x: hidden
   .header__container
     max-width: 1170px
-    width: calc(100% - 8px);
+    width: calc(100% - 8px)
     margin: 0 auto
     padding: 11px 22px 11px 28px
     display: flex
@@ -26,14 +26,14 @@
         transition: transform 1s ease
 
   .header
-    width: calc(100% - 8px);
-    position: absolute;
-    top: 0;
-    left: 2px;
+    width: calc(100% - 8px)
+    position: absolute
+    top: 0
+    left: 2px
     display: flex
     align-items: center
     justify-content: flex-start
-    transition: all 0.3s ease;
+    transition: all 0.3s ease
     &.fixed
       width: 100%
       background-color: transparent
@@ -45,9 +45,7 @@
       transition: all 0.3s ease
       & .header__container
         width: 100%
-        border-radius: 0
     &__btn-wrapper
-      outline: 1px solid red
       color: #000000
       @media screen and (max-width: 992px)
         display: grid
@@ -62,7 +60,9 @@
       line-height: 1
       display: inline-flex
       border-radius: 30px
-      background-color: vars.$warningColor
+      background-color: #FFC107
+      &:hover
+        background-color: #FFD900
       @media screen and (max-width: 575px)
         display: none
 
@@ -71,7 +71,6 @@
     align-items: center
     &__list
       display: flex
-      outline: 4px solid green
     li
       padding: 0 32px
       &:last-child
@@ -134,7 +133,7 @@
     transform: rotate(45deg) translate(5px, 5px)
 
   .burger.active span:nth-child(2) 
-    opacity: 0;
+    opacity: 0
 
   .burger.active span:nth-child(3) 
     transform: rotate(-45deg) translate(6px, -6px)

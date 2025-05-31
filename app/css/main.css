@@ -54,10 +54,8 @@
 }
 .hero .header.fixed .header__container {
   width: 100%;
-  border-radius: 0;
 }
 .hero .header__btn-wrapper {
-  outline: 1px solid red;
   color: #000000;
 }
 @media screen and (max-width: 992px) {
@@ -75,6 +73,9 @@
   line-height: 1;
   display: inline-flex;
   border-radius: 30px;
+  background-color: #FFC107;
+}
+.hero .header__btn:hover {
   background-color: #FFD900;
 }
 @media screen and (max-width: 575px) {
@@ -88,7 +89,6 @@
 }
 .hero .menu__list {
   display: flex;
-  outline: 4px solid green;
 }
 .hero .menu li {
   padding: 0 32px;
@@ -292,6 +292,106 @@
   .about-us .counter__text {
     font-size: 14px;
   }
+}
+
+.menu__navigation {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.menu__navigation .menu-btn {
+  padding: 8px 12px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.menu__navigation .menu-btn:hover {
+  color: #FFC107;
+}
+.menu__navigation .menu-btn.active {
+  color: #FFC107;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 992px) {
+  .menu__navigation .menu-btn {
+    padding: 4px 8px;
+    font-size: 16px;
+  }
+}
+.menu__items-container {
+  min-height: 476px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media screen and (max-width: 992px) {
+  .menu__items-container {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu__items-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu__items-container {
+    grid-template-columns: 100%;
+  }
+}
+.menu__item-element {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+.menu__image-wrapper {
+  position: relative;
+}
+.menu__item-img {
+  width: 100%;
+  border-radius: 20px;
+}
+.menu__item-price {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #FFC107;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 8px;
+}
+@media screen and (max-width: 992px) {
+  .menu__item-price {
+    padding: 16px;
+    font-size: 18px;
+  }
+}
+.menu__item-name {
+  font-size: 24px;
+}
+@media screen and (max-width: 992px) {
+  .menu__item-name {
+    font-size: 20px;
+  }
+}
+.menu__item-description {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
 }
 
 .chefs .swiper-slide {
@@ -579,6 +679,11 @@ ul, ol {
   list-style: none;
 }
 
+img {
+  height: auto;
+  display: block;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -597,7 +702,6 @@ section {
   width: 100%;
   margin: 0 auto;
   padding: 60px 15px;
-  outline: 1px solid green;
 }
 
 .sp-mask {

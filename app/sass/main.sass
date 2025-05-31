@@ -1,8 +1,9 @@
-@use 'utils/vars' as vars;
+@use 'utils/vars' as vars
 @use 'utils/fonts'
 @use 'utils/mixins'
 @use "modules/header"
 @use "modules/about-us"
+@use "modules/menu"
 @use "modules/chefs"
 @use "modules/footer"
 @use "modules/slider"
@@ -39,6 +40,10 @@ ul, ol
   margin: 0
   list-style: none
 
+img
+  height: auto
+  display: block
+
 a
   color: inherit
   text-decoration: none
@@ -54,7 +59,6 @@ section
   width: 100%
   margin: 0 auto
   padding: 60px 15px
-  outline: 1px solid green
 
 .sp-mask
   width: 100% !important
@@ -67,7 +71,7 @@ section
 .section-subtitle
   width: fit-content
   padding-left: 40px
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', cursive
   font-size: 24px
   font-weight: 600
   color: #FFC107

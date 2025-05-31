@@ -215,8 +215,8 @@ new Swiper(".swiper", {
   spaceBetween: 20,
   speed: 1000,
   autoplay: {
-    // delay: 3000,
-    // disableOnInteraction: false,
+    delay: 3000,
+    disableOnInteraction: false,
   },
   breakpoints: {
     450: {
@@ -238,3 +238,58 @@ new Swiper(".swiper", {
     },
   },
 });
+
+//menu section
+document.addEventListener("DOMContentLoaded", function () {
+  const menuNavEl = document.querySelector(".menu__navigation");
+  const menuItemsContainerEl = document.querySelector(".menu__items-container");
+  const menuButtonsEl = document.querySelectorAll(".menu-btn");
+  let dataArr = null;
+  let activeNavEl = "burgers"
+  async function loadMenu() {
+    try {
+      const response = await fetch('../demo-data/menu.json');
+      if (!response.ok) throw new Error('Не вдалося завантажити menu.json');
+
+      const data = await response.json();
+
+      console.log('Дані з меню:', data);
+      return data;
+    } catch (error) {
+      console.error('Помилка при завантаженні JSON:', error);
+    }
+  }
+
+  loadMenu().then(data => {
+    if (data) {
+      dataArr = data;
+
+      showItems(data, "burgers");
+    }
+  });
+
+  function showItems (data, category) {
+    let markup = "";
+    data[category].forEach(({ id, name, price, description, image }) => {
+      markup += `<div class="menu__item-element" id=${id}>
+      <div class="menu__image-wrapper">
+        <img class="menu__item-img" src="../img/menu/${image}.webp" alt="${name}"/>
+        <div class="menu__item-price">$${price}</div>
+      </div>
+      <h3 class="menu__item-name">${name}</h3>
+      <div class="menu__item-description">${description}</div>
+    </div>`;
+    });
+
+    menuItemsContainerEl.innerHTML = markup;
+  }
+
+  menuButtonsEl.forEach(item => item.addEventListener("click", () => {
+    const btnName = item.dataset.name;
+    console.log("btnName", btnName);
+    menuButtonsEl.forEach(btn => btn.classList.remove("active"));
+    item.classList.add("active");
+
+    showItems(dataArr, btnName);
+  }))
+})

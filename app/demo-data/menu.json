@@ -1,0 +1,112 @@
+{
+  "burgers": [
+    {
+      "id": "1",
+      "name": "Double mac burger",
+      "price": "16.59",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "burger-1"
+    },
+    {
+      "id": "2",
+      "name": "Beef cheese burger",
+      "price": "13.00",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "burger-2"
+    },
+    {
+      "id": "3",
+      "name": "Chicken burger",
+      "price": "14.00",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "burger-3"
+    },
+    {
+      "id": "4",
+      "name": "Fiery Chili Cheddar Wonder",
+      "price": "11.59",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "burger-4"
+    },
+    {
+      "id": "5",
+      "name": "Sunny Cheese Explosion",
+      "price": "16.87",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "burger-5"
+    },
+    {
+      "id": "6",
+      "name": "Black Dragon Burger",
+      "price": "14.00",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "burger-6"
+    }
+  ],
+  "pizzas": [
+    {
+      "id": "1",
+      "name": "Grand italiano pizza",
+      "price": "17.83",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "pizza-1"
+    },
+    {
+      "id": "2",
+      "name": "Double Cheese Pizza",
+      "price": "18.42",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "pizza-2"
+    },
+    {
+      "id": "3",
+      "name": "Italian Fiesta Pizza",
+      "price": "10.50",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "pizza-3"
+    }
+  ],
+  "steaks": [
+    {
+      "id": "1",
+      "name": "Sunny Lemon Longhorn",
+      "price": "13.25",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "steak-1"
+    },
+    {
+      "id": "2",
+      "name": "Luxurious Ribeye",
+      "price": "16.45",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "steak-2"
+    }
+  ],
+  "pasts": [
+    {
+      "id": "1",
+      "name": "Pasta",
+      "price": "12.84",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "pasta-1"
+    }
+  ],
+  "salads": [
+    {
+      "id": "1",
+      "name": "Mediterranean Breeze Salad",
+      "price": "14.84",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "salads-1"
+    }
+  ],
+  "drinks": [
+    {
+      "id": "1",
+      "name": "Mojito",
+      "price": "14.84",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque.",
+      "image": "drinks-1"
+    }
+  ]
+}
