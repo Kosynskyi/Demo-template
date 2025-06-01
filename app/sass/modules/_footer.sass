@@ -1,62 +1,54 @@
-@use "./../utils/vars.sass" as vars;
+@use "./../utils/vars.sass" as vars
 .footer
-  padding: 64px 0 36px
-  background-color: vars.$footerBGColor
-  z-index: 10
-
-  &__logo-wrapper
-    margin-bottom: 38px
+  background-color: #000
+  &__container
+    @media screen and (max-width: 768px)
+      padding: 30px 15px !important
+  &__content
+    padding-bottom: 20px
+    margin-bottom: 20px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-direction: row
+    gap: 20px
+    border-bottom: 1px solid #3B3B3F
+    @media screen and (max-width: 576px)
+      flex-direction: column
 
   &__navigation
-    padding-bottom: 36px
-    margin-bottom: 36px
-    border-bottom: 1px solid #3B3B3F
+    padding-right: 80px
+    @media screen and (max-width: 576px)
+      padding-right: 0
     .menu
       color: vars.$white
-      display: block
-      background-color: transparent
-      position: static
+      display: flex
       box-shadow: none
       &__list
         display: flex
         flex-direction: row
         flex-wrap: wrap
-        column-gap: 56px
+        column-gap: 40px
+        @media screen and (max-width: 992px)
+          column-gap: 32px
+        @media screen and (max-width: 768px)
+          column-gap: 24px
+        @media screen and (max-width: 576px)
+          column-gap: 20px
         li
           padding: 0
           a
             font-size: 16px
-            font-weight: 300
+            font-weight: 500
             line-height: 1
             color: vars.$white
             transition: all .3s ease
-      @media screen and (max-width: 1500px)
-        &__list
-          column-gap: 40px
-      @media screen and (max-width: 1200px)
-        &__list
-          column-gap: 28px
-      @media screen and (max-width: 768px)
-        &__list
-          align-items: center
-          justify-content: center
-          li
-            padding: 5px 0
-            text-align: center
-
+            &:hover
+              color: #FFC107
   &__author
-    font-size: 16px
-    font-weight: 300
-    line-height: 1
-    color: vars.$footerContactsColor
-    .company-name
-      color: vars.$white
-      font-weight: 600
+    font-weight: 400
     .highlighted-text
-      color: vars.$accentColor
-    a
-      color: vars.$accentColor
-      text-decoration: underline
+      color: #FFC107
 
   .back-to-top
     width: 50px
