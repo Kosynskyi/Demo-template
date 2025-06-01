@@ -33,7 +33,7 @@
   transition: transform 1s ease;
 }
 .hero .header {
-  width: calc(100% - 8px);
+  width: calc(100% - 2px);
   position: absolute;
   top: 0;
   left: 2px;
@@ -83,26 +83,31 @@
     display: none;
   }
 }
-.hero .menu {
+.hero .nav-menu {
   display: flex;
   align-items: center;
 }
-.hero .menu__list {
+.hero .nav-menu__list {
   display: flex;
 }
-.hero .menu li {
+.hero .nav-menu li {
   padding: 0 32px;
 }
-.hero .menu li:last-child {
+.hero .nav-menu li:last-child {
   display: none;
 }
-.hero .menu li a {
+@media screen and (max-width: 576px) {
+  .hero .nav-menu li:last-child {
+    display: block;
+  }
+}
+.hero .nav-menu li a {
   font-weight: 600;
   transition: all 0.3s ease;
   color: #ffffff;
   position: relative;
 }
-.hero .menu li a:before {
+.hero .nav-menu li a:before {
   content: "";
   position: absolute;
   left: 0;
@@ -113,20 +118,20 @@
   background-color: #FFC107;
   transition: width 0.3s ease;
 }
-.hero .menu li a:hover {
+.hero .nav-menu li a:hover {
   color: #FFC107;
 }
-.hero .menu li a:hover:before {
+.hero .nav-menu li a:hover:before {
   width: 100%;
 }
-.hero .menu li a:first-child {
+.hero .nav-menu li a:first-child {
   padding-left: 0;
 }
-.hero .menu li a:last-child {
+.hero .nav-menu li a:last-child {
   padding-right: 0;
 }
 @media screen and (max-width: 992px) {
-  .hero .menu {
+  .hero .nav-menu {
     width: 100%;
     display: none;
     position: absolute;
@@ -136,10 +141,14 @@
     left: 0;
     z-index: 999;
   }
-  .hero .menu__list {
+  .hero .nav-menu.active {
+    display: block;
+    background-color: #000000;
+  }
+  .hero .nav-menu__list {
     flex-direction: column;
   }
-  .hero .menu__list li {
+  .hero .nav-menu__list li {
     padding: 10px 0;
     text-align: center;
   }
@@ -647,6 +656,7 @@
   pointer-events: none;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   border: 2px solid #FFC107;
+  background-color: transparent;
   border-radius: 50%;
   background-image: url("../../img/arrow-top.svg");
   background-size: initial;
@@ -655,6 +665,7 @@
   position: fixed;
   bottom: 100px;
   right: 60px;
+  cursor: pointer;
 }
 .footer .back-to-top.visible {
   opacity: 1;

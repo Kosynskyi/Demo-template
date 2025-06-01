@@ -26,7 +26,7 @@
         transition: transform 1s ease
 
   .header
-    width: calc(100% - 8px)
+    width: calc(100% - 2px)
     position: absolute
     top: 0
     left: 2px
@@ -66,7 +66,7 @@
       @media screen and (max-width: 575px)
         display: none
 
-  .menu
+  .nav-menu
     display: flex
     align-items: center
     &__list
@@ -75,6 +75,8 @@
       padding: 0 32px
       &:last-child
         display: none
+        @media screen and (max-width: 576px)
+          display: block
       a
         font-weight: 600
         transition: all .3s ease
@@ -107,6 +109,9 @@
       top: 67px
       left: 0
       z-index: 999
+      &.active
+        display: block
+        background-color: #000000
       &__list
         flex-direction: column
         li

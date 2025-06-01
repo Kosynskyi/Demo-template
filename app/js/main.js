@@ -1,150 +1,3 @@
-/*Header menu*/
-const menuBtn = $(".mobile-btn");
-const headerContainer = $(".header__container");
-
-// menuBtn.on("click", function () {
-//   if (!$(this).hasClass("mobile-btn_active")) {
-//     $(this).addClass("mobile-btn_active");
-//     headerContainer.addClass("mobile-menu-open");
-//     $("#menu").animate({
-//       height: "toggle",
-//     });
-//   } else {
-//     $(this).removeClass("mobile-btn_active");
-//     headerContainer.removeClass("mobile-menu-open");
-//     $("#menu").animate({
-//       height: "toggle",
-//     });
-//   }
-// });
-
-$(document).ready(function () {
-  $(".burger").click(function () {
-    $(this).toggleClass("active");
-    $(".menu").toggleClass("active");
-  });
-});
-
-/*Scroll*/
-$(document).ready(function () {
-  $(".links").on("click", "a", function (event) {
-    event.preventDefault();
-    let id = $(this).attr("href"),
-      top = $(id).offset().top;
-    $("body,html").animate({ scrollTop: top - 25 }, 500);
-  });
-});
-
-/*Accordion*/
-$(function () {
-  $("#faq-accordion")
-    .accordion({
-      header: "> div > h3",
-      heightStyle: "content",
-    })
-    .sortable({
-      axis: "y",
-      handle: "h3",
-      stop: function (event, ui) {
-        ui.item.children("h3").triggerHandler("focusout");
-        $(this).accordion("refresh");
-      },
-    });
-});
-
-/*Current year*/
-let currentYear = $("#current-year");
-currentYear.html(new Date().getFullYear());
-
-/*Set cookie message*/
-$.cookieMessage({
-  mainMessage:
-    'This website uses cookies. By using this website you consent to our use of these cookies. <br>For more information visit our <a href="privacy-policy.html" target="_blank">Privacy Policy</a> and <a href="user-consent.html" target="_blank">User Consent</a><br><br>',
-  acceptButton: "I Agree!",
-  expirationDays: 365,
-  cookieName: "cookie",
-  backgroundColor: "rgba(0, 0, 0, 0.8)",
-  fontSize: "14px",
-  fontColor: "white",
-  btnBackgroundColor: "#3D65CB",
-  btnFontSize: "14px",
-  btnFontColor: "white",
-  linkFontColor: "#60c679",
-});
-
-/*Show services details*/
-$(document).ready(function () {
-  const servicesNavItemEl = $(".services__item");
-  const servicesDetailsEl = $(".services-details__container");
-
-  servicesNavItemEl.on("click", function () {
-    const index = $(this).index();
-    servicesNavItemEl.removeClass("active");
-    $(this).addClass("active");
-    servicesDetailsEl.removeClass("active");
-    servicesDetailsEl.eq(index).addClass("active");
-  });
-});
-
-/*Close prev element in advantages container*/
-$(".advantages__item-title").on("click", function () {
-  const $clickedItem = $(this).closest(".advantages__item");
-  const $clickedContent = $clickedItem.find(".advantages__description-wrapper");
-
-  if ($clickedItem.hasClass("open")) {
-    $clickedItem.removeClass("open");
-    $clickedContent.stop(true, true).slideUp(300);
-  } else {
-    $(".advantages__item").removeClass("open");
-    $(".advantages__description-wrapper").stop(true, true).slideUp(300);
-
-    $clickedItem.addClass("open");
-    $clickedContent
-      .stop(true, true)
-      .css("display", "flex")
-      .hide()
-      .slideDown(300);
-  }
-});
-
-/*Close prev element in faq container*/
-$(".faq__item-title").on("click", function () {
-  const $clickedItem = $(this).closest(".faq__item");
-  const $clickedContent = $clickedItem.find(".faq__description-wrapper");
-
-  if ($clickedItem.hasClass("open")) {
-    $clickedItem.removeClass("open");
-    $clickedContent.stop(true, true).slideUp(300);
-  } else {
-    $(".faq__item").removeClass("open");
-    $(".faq__description-wrapper").stop(true, true).slideUp(300);
-
-    $clickedItem.addClass("open");
-    $clickedContent
-      .stop(true, true)
-      .css("display", "flex")
-      .hide()
-      .slideDown(300);
-  }
-});
-
-/*sticky header*/
-$(document).ready(function () {
-  $(window).on("scroll", function () {
-    console.log(123);
-    const $header = $(".header");
-    const $backToTop = $(".back-to-top");
-    if ($(this).scrollTop() > 50) {
-      $header.addClass("fixed");
-      $backToTop.addClass("visible");
-    } else {
-      $header.removeClass("fixed");
-      $backToTop.removeClass("visible");
-    }
-  });
-});
-
-// my
 $(document).ready(function () {
   $("#hero-slider").sliderPro({
     width: "100%",
@@ -153,8 +6,49 @@ $(document).ready(function () {
     arrows: true,
     buttons: false,
     waitForLayers: true,
-    autoplay: false,
+    autoplay: false
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".header");
+  const backToTop = document.querySelector(".back-to-top");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      header.classList.add("fixed");
+      backToTop.classList.add("visible");
+    } else {
+      header.classList.remove("fixed");
+      backToTop.classList.remove("visible");
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenuEl = document.querySelector(".burger");
+  const mobileNavEl = document.querySelector(".nav-menu.links");
+  mobileMenuEl.addEventListener("click", () => {
+    mobileMenuEl.classList.toggle("active");
+    mobileNavEl.classList.toggle("active");
+  });
+});
+
+/*Scroll*/
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopBtnEl = document.querySelector(".back-to-top");
+  backToTopBtnEl.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
+
+/*Current year*/
+document.addEventListener("DOMContentLoaded", () => {
+  const currentYear = document.getElementById("current-year");
+  currentYear.textContent = new Date().getFullYear();
 });
 
 // counter
@@ -162,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".counter__number span");
   let started = false;
 
-  function animateCounter(el, target, duration = 3000) {
+  function animateCounter (el, target, duration = 3000) {
     let startTimestamp = null;
 
     const step = (timestamp) => {
@@ -190,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (entry.isIntersecting && !started) {
           counters.forEach((counter) => {
             const target = +counter.getAttribute("data-count");
-            animateCounter(counter, target, 3000); // 4 секунди
+            animateCounter(counter, target, 3000);
           });
           started = true;
           observer.disconnect();
@@ -198,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
     {
-      threshold: 0.5,
+      threshold: 0.5
     }
   );
 
@@ -216,18 +110,18 @@ new Swiper(".swiper", {
   speed: 1000,
   autoplay: {
     delay: 3000,
-    disableOnInteraction: false,
+    disableOnInteraction: false
   },
   breakpoints: {
     450: {
-      slidesPerView: 2,
+      slidesPerView: 2
     },
     800: {
-      slidesPerView: 4,
-    },
+      slidesPerView: 4
+    }
   },
   on: {
-    init() {
+    init () {
       this.el.addEventListener("mouseenter", () => {
         this.autoplay.stop();
       });
@@ -235,18 +129,18 @@ new Swiper(".swiper", {
       this.el.addEventListener("mouseleave", () => {
         this.autoplay.start();
       });
-    },
-  },
+    }
+  }
 });
 
 //menu section
 document.addEventListener("DOMContentLoaded", function () {
-  const menuNavEl = document.querySelector(".menu__navigation");
   const menuItemsContainerEl = document.querySelector(".menu__items-container");
   const menuButtonsEl = document.querySelectorAll(".menu-btn");
   let dataArr = null;
   let activeNavEl = "burgers";
-  async function loadMenu() {
+
+  async function loadMenu () {
     try {
       const response = await fetch("../demo-data/menu.json");
       if (!response.ok) throw new Error("Не вдалося завантажити menu.json");
@@ -267,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  function showItems(data, category) {
+  function showItems (data, category) {
     let markup = "";
     data[category].forEach(({ id, name, price, description, image }) => {
       markup += `<div class="menu__item-element" id=${id}>
