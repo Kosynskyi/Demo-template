@@ -764,6 +764,7 @@ html, body {
   color: #ffffff;
   background-color: #ffffff;
   line-height: 1.44;
+  scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 768px) {
