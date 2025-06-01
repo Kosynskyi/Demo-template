@@ -13,49 +13,49 @@ var plumber = require("gulp-plumber");
 // CSS мінімізація і перейменування
 gulp.task("css", function () {
   return gulp
-    .src(["app/css/libs.css", "app/css/main.css"])
+    .src(["docs/css/libs.css", "docs/css/main.css"])
     .pipe(rename({ suffix: ".min" }))
     .pipe(cleanCSS())
-    .pipe(gulp.dest("app/css"));
+    .pipe(gulp.dest("docs/css"));
 });
 
 // JS об'єднання і мінімізація
 gulp.task("script", function () {
   return gulp
-    .src(["app/libs/bootstrap-4.5.0/js/bootstrap.js"])
-    .pipe(concat("libs.min.js"))
+  .src(["docs/js/*.js"])
+    .pipe(concat("main.min.js"))
     .pipe(terser())
-    .pipe(gulp.dest("app/js"));
+    .pipe(gulp.dest("docs/js"));
 });
 
 // Сервер і слідкування
 gulp.task("browser-sync", function () {
   browserSync.init({
     server: {
-      baseDir: "app",
+      baseDir: "docs",
     },
   });
 
-  gulp.watch("app/sass/**/*.sass", gulp.series("sass"));
-  gulp.watch("app/js/*.js").on("change", browserSync.reload);
-  gulp.watch("app/*.html").on("change", browserSync.reload);
+  gulp.watch("docs/sass/**/*.sass", gulp.series("sass"));
+  gulp.watch("docs/js/*.js").on("change", browserSync.reload);
+  gulp.watch("docs/*.html").on("change", browserSync.reload);
 });
 
 // Комппіляція sass + автопрефіксер + живе оновлення в браузері
 gulp.task("sass", function () {
   return gulp
-    .src("app/sass/*.sass")
+    .src("docs/sass/*.sass")
     .pipe(plumber()) // запобігає зламу gulp при помилці
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(autoprefixer()) // читає з browserslist у package.json або .browserslistrc
-    .pipe(gulp.dest("app/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(browserSync.stream());
 });
 
 // Оптимізація зображень через TinyPNG
 gulp.task("img", function (done) {
   gulp
-    .src("app/img/**/*.{png,jpg,jpeg}")
+    .src("docs/img/**/*.{png,jpg,jpeg}")
     .pipe(
       tinypng({
         key: "D7HN9g6wPg5yW6hHx6H7Xc36SyjDhqWZ",
@@ -68,13 +68,13 @@ gulp.task("img", function (done) {
 // Збірка проекту в dist з правильним завершенням
 gulp.task("build", function () {
   return Promise.all([
-    gulp.src("app/*.html").pipe(gulp.dest("dist")),
-    gulp.src("app/fonts/**/*").pipe(gulp.dest("dist/fonts")),
-    gulp.src("app/js/*.js").pipe(gulp.dest("dist/js")),
+    gulp.src("docs/*.html").pipe(gulp.dest("dist")),
+    gulp.src("docs/fonts/**/*").pipe(gulp.dest("dist/fonts")),
+    gulp.src("docs/js/*.js").pipe(gulp.dest("dist/js")),
     gulp
-      .src(["app/css/*.css", "!app/css/libs.css"])
+      .src(["docs/css/*.css", "!docs/css/libs.css"])
       .pipe(gulp.dest("dist/css")),
-    gulp.src("app/img/**/*.{png,jpg,jpeg,svg}").pipe(gulp.dest("dist/img")),
+    gulp.src("docs/img/**/*.{png,jpg,jpeg,svg}").pipe(gulp.dest("dist/img")),
   ]);
 });
 
