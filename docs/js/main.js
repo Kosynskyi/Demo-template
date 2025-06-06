@@ -6,7 +6,7 @@ $(document).ready(function () {
     arrows: true,
     buttons: false,
     waitForLayers: true,
-    autoplay: false
+    autoplay: false,
   });
 });
 
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   backToTopBtnEl.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   });
 });
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".counter__number span");
   let started = false;
 
-  function animateCounter (el, target, duration = 3000) {
+  function animateCounter(el, target, duration = 3000) {
     let startTimestamp = null;
 
     const step = (timestamp) => {
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
     {
-      threshold: 0.5
+      threshold: 0.5,
     }
   );
 
@@ -110,18 +110,18 @@ new Swiper(".swiper", {
   speed: 1000,
   autoplay: {
     delay: 3000,
-    disableOnInteraction: false
+    disableOnInteraction: false,
   },
   breakpoints: {
     450: {
-      slidesPerView: 2
+      slidesPerView: 2,
     },
     800: {
-      slidesPerView: 4
-    }
+      slidesPerView: 4,
+    },
   },
   on: {
-    init () {
+    init() {
       this.el.addEventListener("mouseenter", () => {
         this.autoplay.stop();
       });
@@ -129,8 +129,8 @@ new Swiper(".swiper", {
       this.el.addEventListener("mouseleave", () => {
         this.autoplay.start();
       });
-    }
-  }
+    },
+  },
 });
 
 //menu section
@@ -140,16 +140,16 @@ document.addEventListener("DOMContentLoaded", function () {
   let dataArr = null;
   let activeNavEl = "burgers";
 
-  async function loadMenu () {
+  async function loadMenu() {
     try {
-      const response = await fetch("../demo-data/menu.json");
-      if (!response.ok) throw new Error("Не вдалося завантажити menu.json");
+      const response = await fetch("./demo-data/menu.json");
+      if (!response.ok) throw new Error("Can not load json file");
 
       const data = await response.json();
 
       return data;
     } catch (error) {
-      console.error("Помилка при завантаженні JSON:", error);
+      console.error("Error load JSON:", error);
     }
   }
 
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  function showItems (data, category) {
+  function showItems(data, category) {
     let markup = "";
     data[category].forEach(({ id, name, price, description, image }) => {
       markup += `<div class="menu__item-element" id=${id}>
