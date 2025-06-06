@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
     data[category].forEach(({ id, name, price, description, image }) => {
       markup += `<div class="menu__item-element" id=${id}>
       <div class="menu__image-wrapper">
-        <img class="menu__item-img" src="../img/menu/${image}.webp" alt="${name}"/>
+        <img class="menu__item-img" src="./img/menu/${image}.webp" alt="${name}"/>
         <div class="menu__item-price">$${price}</div>
       </div>
       <h3 class="menu__item-name">${name}</h3>
