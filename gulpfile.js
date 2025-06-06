@@ -22,7 +22,7 @@ gulp.task("css", function () {
 // JS об'єднання і мінімізація
 gulp.task("script", function () {
   return gulp
-  .src(["docs/js/*.js"])
+    .src(["docs/js/*.js"])
     .pipe(concat("main.min.js"))
     .pipe(terser())
     .pipe(gulp.dest("docs/js"));
@@ -71,6 +71,7 @@ gulp.task("build", function () {
     gulp.src("docs/*.html").pipe(gulp.dest("dist")),
     gulp.src("docs/fonts/**/*").pipe(gulp.dest("dist/fonts")),
     gulp.src("docs/js/*.js").pipe(gulp.dest("dist/js")),
+    gulp.src("docs/demo-data/*.json").pipe(gulp.dest("dist/demo-data")),
     gulp
       .src(["docs/css/*.css", "!docs/css/libs.css"])
       .pipe(gulp.dest("dist/css")),
