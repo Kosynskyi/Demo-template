@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // menu finish
     //   contacts
     gsap.fromTo(".contacts__content",
-      { x: -80, y: 100, opacity: 0.4 },
+      { x: -40, y: 100, opacity: 0.5 },
       {
         x: 0,
         y: 0,
@@ -300,7 +300,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       });
 
     gsap.fromTo(".contacts__working-hours",
-      { x: 80, y: 100, opacity: 0.4 },
+      { x: 40, y: 100, opacity: 0.5 },
       {
         x: 0,
         y: 0,
