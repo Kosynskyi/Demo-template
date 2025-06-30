@@ -1,6 +1,6 @@
 @use "./../utils/vars.sass" as vars
 .footer
-  background-color: #000
+  background-color: vars.$bgColor
   &__container
     @media screen and (max-width: 768px)
       padding: 30px 15px !important
@@ -49,32 +49,3 @@
     font-weight: 400
     .highlighted-text
       color: #FFC107
-
-  .back-to-top
-    width: 50px
-    height: 50px
-    display: flex
-    opacity: 0
-    visibility: hidden
-    pointer-events: none
-    transition: opacity 0.3s ease, visibility 0.3s ease
-    border: 2px solid #FFC107
-    background-color: transparent
-    border-radius: 50%
-    background-image: url('../img/arrow-top.svg')
-    background-size: initial
-    background-repeat: no-repeat
-    background-position: center center
-    position: fixed
-    bottom: 100px
-    right: 60px
-    cursor: pointer
-
-    &.visible
-      opacity: 1
-      visibility: visible
-      pointer-events: auto
-    @media screen and (max-width: 1200px)
-      right: 15px
-    @media screen and (max-width: 576px)
-      margin-top: 25px

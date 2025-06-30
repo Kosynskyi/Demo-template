@@ -8,6 +8,8 @@
 @use "modules/contacts"
 @use "modules/footer"
 @use "modules/slider"
+@use "modules/back-to-top"
+@use "modules/hero"
 
 *
   box-sizing: border-box
@@ -21,9 +23,10 @@ html, body
   font-size: vars.$mainFontSize
   font-weight: vars.$mainFontWeight
   color: #ffffff
-  background-color: vars.$white
+  background-color: vars.$bgColor
   line-height: vars.$mainLineHeight
   scroll-behavior: smooth
+  //overflow: hidden
 
 html
   @media screen and (max-width: vars.$mdWidth)
@@ -54,7 +57,14 @@ a
 
 section
   background-color: #000000
-  overflow-x: hidden
+  //overflow-x: hidden
+
+#smooth-wrapper
+  height: 100%
+  overflow: hidden
+
+#smooth-content
+  will-change: transform
 
 .container
   max-width: 1200px

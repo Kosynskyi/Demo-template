@@ -1,650 +1,660 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link href="img/favicon.ico" rel="icon" />
-    <title>Restfood</title>
-    <link href="css/main.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <!-- js slider -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/bqworks/slider-pro/dist/css/slider-pro.min.css"
-    />
-    <!-- icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <section class="hero" id="hero">
-      <header class="header">
-        <div class="header__container">
-          <a href="/" class="logo">
-            <img
-              src="img/restaurant-logo.svg"
-              alt="restfood logo"
-              width="45"
-              height="45"
-            />
-          </a>
-          <nav class="nav-menu links">
-            <ul class="nav-menu__list">
-              <li>
-                <a href="#about-us">About Us</a>
-              </li>
-              <li>
-                <a href="#chefs">Chefs</a>
-              </li>
-              <li>
-                <a href="#menu">Menu</a>
-              </li>
-              <li>
-                <a href="#contacts">Contacts</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header__btn-wrapper">
-            <div class="links">
-              <a href="#contacts" class="header__btn">Contacts</a>
-            </div>
-            <div class="burger" aria-label="Toggle mobile menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="img/favicon.ico" rel="icon" />
+  <title>Restfood</title>
+  <link href="css/main.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- js slider -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/bqworks/slider-pro/dist/css/slider-pro.min.css"
+  />
+  <!-- icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+<main>
+  <header class="header">
+    <div class="header__container">
+      <a href="/" class="logo">
+        <img
+          src="img/restaurant-logo.svg"
+          alt="restfood logo"
+          width="45"
+          height="45"
+        />
+      </a>
+      <nav class="nav-menu links">
+        <ul class="nav-menu__list">
+          <li>
+            <a href="#about-us">About Us</a>
+          </li>
+          <li>
+            <a href="#chefs">Chefs</a>
+          </li>
+          <li>
+            <a href="#menu">Menu</a>
+          </li>
+          <li>
+            <a href="#contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__btn-wrapper">
+        <div class="links">
+          <a href="#contacts" class="header__btn">Contacts</a>
         </div>
-      </header>
-
-      <div id="hero-slider" class="slider-pro">
-        <div class="sp-slides">
-          <!-- slide 1 -->
-          <div class="sp-slide">
-            <img class="sp-image" src="img/slider-1-80.webp" alt="Slide 1" />
-            <div
-              class="caption sp-layer"
-              data-position="centerLeft"
-              data-show-transition="right"
-              data-hide-transition="right"
-              data-horizontal="5%"
-            >
-              <div class="slide">
-                <p class="slide__price">Start from 1.99$*</p>
-                <h1 class="slide__title">Tasty Burger!</h1>
-                <p class="slide__ingredients">
-                  Garlic Souce, Masterd Souce, Onion, Bread with 1 Liter Cold
-                  Drink
-                </p>
-                <p class="slide__order">Order: +1 123456789</p>
-                <div class="slide__delivery">
-                  <img
-                    src="img/fast-delivery.svg"
-                    width="40"
-                    height="40"
-                    alt="icon"
-                  />
-                  Free &amp; Fast Delivery
-                </div>
-                <div class="slide__cta">
-                  <a href="#contacts" class="button">Order Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- slide 2 -->
-          <div class="sp-slide">
-            <img class="sp-image" src="img/slider-2-80.webp" alt="Slide 2" />
-            <div
-              class="caption sp-layer"
-              data-position="centerLeft"
-              data-show-transition="right"
-              data-hide-transition="right"
-              data-horizontal="5%"
-            >
-              <div class="slide">
-                <p class="slide__price">Start from 3.99$*</p>
-                <h1 class="slide__title">Yummy Pizza!</h1>
-                <p class="slide__ingredients">
-                  Garlic Souce, Masterd Souce, Onion, Bread with 1 Liter Cold
-                  Drink
-                </p>
-                <p class="slide__order">Order: +1 123456789</p>
-                <div class="slide__delivery">
-                  <img
-                    src="img/fast-delivery.svg"
-                    width="40"
-                    height="40"
-                    alt="icon"
-                  />
-                  Free &amp; Fast Delivery
-                </div>
-                <div class="slide__cta">
-                  <a href="#contacts" class="button">Order Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- slide 3 -->
-          <div class="sp-slide">
-            <img class="sp-image" src="img/slider-3-80.webp" alt="Slide 3" />
-            <div
-              class="caption sp-layer"
-              data-position="centerLeft"
-              data-show-transition="right"
-              data-hide-transition="right"
-              data-horizontal="5%"
-            >
-              <div class="slide">
-                <p class="slide__price">Start from 7.99$*</p>
-                <h1 class="slide__title">Sea Food!</h1>
-                <p class="slide__ingredients">
-                  Garlic Souce, Masterd Souce, Onion, Bread with 1 Liter Cold
-                  Drink
-                </p>
-                <p class="slide__order">Order: +1 123456789</p>
-                <div class="slide__delivery">
-                  <img
-                    src="img/fast-delivery.svg"
-                    width="40"
-                    height="40"
-                    alt="icon"
-                  />
-                  Free &amp; Fast Delivery
-                </div>
-                <div class="slide__cta">
-                  <a href="#contacts" class="button">Order Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- slide 4 -->
-          <div class="sp-slide">
-            <img class="sp-image" src="img/slider-4-80.webp" alt="Slide 4" />
-            <div
-              class="caption sp-layer"
-              data-position="centerLeft"
-              data-show-transition="right"
-              data-hide-transition="right"
-              data-horizontal="5%"
-            >
-              <div class="slide">
-                <p class="slide__price">Start from 9.99$*</p>
-                <h1 class="slide__title">Juicy Steak!</h1>
-                <p class="slide__ingredients">
-                  Garlic Souce, Masterd Souce, Onion, Bread with 1 Liter Cold
-                  Drink
-                </p>
-                <p class="slide__order">Order: +1 123456789</p>
-                <div class="slide__delivery">
-                  <img
-                    src="img/fast-delivery.svg"
-                    width="40"
-                    height="40"
-                    alt="icon"
-                  />
-                  Free &amp; Fast Delivery
-                </div>
-                <div class="slide__cta">
-                  <a href="#contacts" class="button">Order Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="burger" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
-    </section>
-
-    <section id="about-us" class="about-us">
-      <div class="about-us__container container">
-        <div>
-          <div class="section-subtitle">Few words about us</div>
-          <h2 class="section-title">About us</h2>
-          <p class="about-us__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Repudiandae repellendus enim velit consequatur nemo, porro inventore
-            dignissimos, atque laboriosam aspernatur eum deleniti sit explicabo
-            culpa, voluptas saepe. Voluptates, exercitationem, est.
-          </p>
-          <p class="about-us__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Repudiandae repellendus enim velit consequatur nemo, porro inventore
-            dignissimos, atque laboriosam aspernatur eum deleniti sit explicabo
-            culpa, voluptas saepe. Voluptates, exercitationem, est.
-          </p>
-          <p class="about-us__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Repudiandae repellendus enim velit consequatur nemo, porro inventore
-            dignissimos, atque laboriosam aspernatur eum deleniti sit explicabo
-            culpa, voluptas saepe. Voluptates, exercitationem, est.
-          </p>
-          <div class="counter counter__container">
-            <div class="counter__item visitors">
-              <div class="counter__number">
-                <span data-count="150">0</span>+
+    </div>
+  </header>
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <section class="hero" id="hero">
+        <div id="hero-slider" class="slider-pro">
+          <div class="sp-slides">
+            <!-- slide 1 -->
+            <div class="sp-slide">
+              <img class="sp-image" src="img/slider-1-80.webp" alt="Slide 1" />
+              <div
+                class="caption sp-layer"
+                data-position="centerLeft"
+                data-show-transition="right"
+                data-hide-transition="right"
+                data-horizontal="5%"
+              >
+                <div class="slide">
+                  <p class="slide__price">Start from 1.99$*</p>
+                  <h1 class="slide__title">Tasty Burger!</h1>
+                  <p class="slide__ingredients">
+                    Garlic Souce, Masterd Souce, Onion, Bread with 1 Liter Cold
+                    Drink
+                  </p>
+                  <p class="slide__order">Order: +1 123456789</p>
+                  <div class="slide__delivery">
+                    <img
+                      src="img/fast-delivery.svg"
+                      width="40"
+                      height="40"
+                      alt="icon"
+                    />
+                    Free &amp; Fast Delivery
+                  </div>
+                  <div class="slide__cta">
+                    <a href="#contacts" class="button">Order Now</a>
+                  </div>
+                </div>
               </div>
-              <p class="counter__text">visitors</p>
             </div>
-            <div class="counter__item feedback">
-              <div class="counter__number">
-                <span data-count="100">0</span>%
+            <!-- slide 2 -->
+            <div class="sp-slide">
+              <img class="sp-image" src="img/slider-2-80.webp" alt="Slide 2" />
+              <div
+                class="caption sp-layer"
+                data-position="centerLeft"
+                data-show-transition="right"
+                data-hide-transition="right"
+                data-horizontal="5%"
+              >
+                <div class="slide">
+                  <p class="slide__price">Start from 3.99$*</p>
+                  <h1 class="slide__title">Yummy Pizza!</h1>
+                  <p class="slide__ingredients">
+                    Garlic Souce, Masterd Souce, Onion, Bread with 1 Liter Cold
+                    Drink
+                  </p>
+                  <p class="slide__order">Order: +1 123456789</p>
+                  <div class="slide__delivery">
+                    <img
+                      src="img/fast-delivery.svg"
+                      width="40"
+                      height="40"
+                      alt="icon"
+                    />
+                    Free &amp; Fast Delivery
+                  </div>
+                  <div class="slide__cta">
+                    <a href="#contacts" class="button">Order Now</a>
+                  </div>
+                </div>
               </div>
-              <p class="counter__text">positive feedback</p>
             </div>
-            <div class="counter__item awards">
-              <div class="counter__number">
-                <span data-count="25">0</span>
+            <!-- slide 3 -->
+            <div class="sp-slide">
+              <img class="sp-image" src="img/slider-3-80.webp" alt="Slide 3" />
+              <div
+                class="caption sp-layer"
+                data-position="centerLeft"
+                data-show-transition="right"
+                data-hide-transition="right"
+                data-horizontal="5%"
+              >
+                <div class="slide">
+                  <p class="slide__price">Start from 7.99$*</p>
+                  <h1 class="slide__title">Sea Food!</h1>
+                  <p class="slide__ingredients">
+                    Garlic Souce, Masterd Souce, Onion, Bread with 1 Liter Cold
+                    Drink
+                  </p>
+                  <p class="slide__order">Order: +1 123456789</p>
+                  <div class="slide__delivery">
+                    <img
+                      src="img/fast-delivery.svg"
+                      width="40"
+                      height="40"
+                      alt="icon"
+                    />
+                    Free &amp; Fast Delivery
+                  </div>
+                  <div class="slide__cta">
+                    <a href="#contacts" class="button">Order Now</a>
+                  </div>
+                </div>
               </div>
-              <p class="counter__text">awards</p>
             </div>
-          </div>
-        </div>
-
-        <div class="about-us__image-container">
-          <img
-            class="about-us__chief"
-            src="./img/chef-about-section.webp"
-            width="300"
-            height="400"
-            alt="Our chef"
-          />
-          <img
-            class="about-us__decoration"
-            src="./img/about-us-decoration.webp"
-            alt="Our food"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section id="chefs" class="chefs">
-      <div class="chefs__container container">
-        <div class="section-subtitle">Meet Our Chefs</div>
-        <h2 class="section-title">Our Chefs</h2>
-        <div class="chefs__img-container">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  class="chiefs__person"
-                  src="./img/chef-about-section.webp"
-                  width="100%"
-                  height="auto"
-                  alt="Our chef"
-                />
-                <div class="chefs__description">
-                  <ul class="chefs__social-links">
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </li>
-                  </ul>
-                  <h3 class="chefs__name">Richard Nauz</h3>
-                  <p class="chefs__position">Food chef</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  class="chiefs__person"
-                  src="./img/chef-team1.webp"
-                  width="100%"
-                  height="auto"
-                  alt="Our chef"
-                />
-                <div class="chefs__description">
-                  <ul class="chefs__social-links">
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </li>
-                  </ul>
-                  <h3 class="chefs__name">Jeremy White</h3>
-                  <p class="chefs__position">Food chef</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  class="chiefs__person"
-                  src="./img/chef-team3.webp"
-                  width="100%"
-                  height="auto"
-                  alt="Our chef"
-                />
-                <div class="chefs__description">
-                  <ul class="chefs__social-links">
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </li>
-                  </ul>
-                  <h3 class="chefs__name">Olivia Grosh</h3>
-                  <p class="chefs__position">Food chef</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  class="chiefs__person"
-                  src="./img/chef-team7.webp"
-                  width="100%"
-                  height="auto"
-                  alt="Our chef"
-                />
-                <div class="chefs__description">
-                  <ul class="chefs__social-links">
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </li>
-                  </ul>
-                  <h3 class="chefs__name">Sofia Mayer</h3>
-                  <p class="chefs__position">Food chef</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  class="chiefs__person"
-                  src="./img/chef-about-section.webp"
-                  width="100%"
-                  height="auto"
-                  alt="Our chef"
-                />
-                <div class="chefs__description">
-                  <ul class="chefs__social-links">
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </li>
-                  </ul>
-                  <h3 class="chefs__name">Richard Nauz</h3>
-                  <p class="chefs__position">Food chef</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  class="chiefs__person"
-                  src="./img/chef-team1.webp"
-                  width="100%"
-                  height="auto"
-                  alt="Our chef"
-                />
-                <div class="chefs__description">
-                  <ul class="chefs__social-links">
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </li>
-                  </ul>
-                  <h3 class="chefs__name">Jeremy White</h3>
-                  <p class="chefs__position">Food chef</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  class="chiefs__person"
-                  src="./img/chef-team3.webp"
-                  width="100%"
-                  height="auto"
-                  alt="Our chef"
-                />
-                <div class="chefs__description">
-                  <ul class="chefs__social-links">
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </li>
-                  </ul>
-                  <h3 class="chefs__name">Olivia Grosh</h3>
-                  <p class="chefs__position">Food chef</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  class="chiefs__person"
-                  src="./img/chef-team7.webp"
-                  width="100%"
-                  height="auto"
-                  alt="Our chef"
-                />
-                <div class="chefs__description">
-                  <ul class="chefs__social-links">
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li class="chefs__social-link-item">
-                      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </li>
-                  </ul>
-                  <h3 class="chefs__name">Sofia Mayer</h3>
-                  <p class="chefs__position">Food chef</p>
+            <!-- slide 4 -->
+            <div class="sp-slide">
+              <img class="sp-image" src="img/slider-4-80.webp" alt="Slide 4" />
+              <div
+                class="caption sp-layer"
+                data-position="centerLeft"
+                data-show-transition="right"
+                data-hide-transition="right"
+                data-horizontal="5%"
+              >
+                <div class="slide">
+                  <p class="slide__price">Start from 9.99$*</p>
+                  <h1 class="slide__title">Juicy Steak!</h1>
+                  <p class="slide__ingredients">
+                    Garlic Souce, Masterd Souce, Onion, Bread with 1 Liter Cold
+                    Drink
+                  </p>
+                  <p class="slide__order">Order: +1 123456789</p>
+                  <div class="slide__delivery">
+                    <img
+                      src="img/fast-delivery.svg"
+                      width="40"
+                      height="40"
+                      alt="icon"
+                    />
+                    Free &amp; Fast Delivery
+                  </div>
+                  <div class="slide__cta">
+                    <a href="#contacts" class="button">Order Now</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="menu" class="menu">
-      <div class="menu__container container">
-        <div class="section-subtitle">Check out our menu</div>
-        <h2 class="section-title">Our menu</h2>
-        <div class="menu__navigation">
-          <button type="button" class="menu-btn active" data-name="burgers">
-            Burgers
-          </button>
-          <button type="button" class="menu-btn" data-name="pizzas">
-            Pizzas
-          </button>
-          <button type="button" class="menu-btn" data-name="steaks">
-            Steaks
-          </button>
-          <button type="button" class="menu-btn" data-name="pasts">
-            Pasts
-          </button>
-          <button type="button" class="menu-btn" data-name="salads">
-            Salads
-          </button>
-          <button type="button" class="menu-btn" data-name="drinks">
-            Drinks
-          </button>
-        </div>
-        <div class="menu__items-container"></div>
-      </div>
-    </section>
-
-    <section id="contacts" class="contacts">
-      <div class="contacts__container container">
-        <div class="contacts__wrapper">
-          <div class="contacts__content">
-            <div class="section-subtitle">Our Address</div>
-            <h2 class="section-title">Contacts</h2>
-            <ul class="contacts__information-list">
-              <li class="contacts__information-item">
-                <i class="fas fa-map-marker-alt"></i>4239 Lapeer Rd, Port
-                Hurons, MI 48060
-              </li>
-              <li class="contacts__information-item">
-                <a href="#"><i class="fas fa-phone"></i>+1 (234) 567-89-01</a>
-              </li>
-              <li class="contacts__information-item">
-                <i class="far fa-clock"></i>We are open from 8am
-              </li>
-            </ul>
-            <ul class="contacts__social">
-              <li>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-              </li>
-            </ul>
-          </div>
-          <div class="contacts__working-hours">
-            <h3>Opening Hours</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et,
-              inventore hic nulla, provident laudantium voluptate ipsa eligendi
-              commodi mollitia vero animi.
+      <section id="about-us" class="about-us">
+        <div class="about-us__container container">
+          <div class="about-us__text-wrapper">
+            <div class="section-subtitle">Few words about us</div>
+            <h2 class="section-title">About us</h2>
+            <p class="about-us__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Repudiandae repellendus enim velit consequatur nemo, porro inventore
+              dignissimos, atque laboriosam aspernatur eum deleniti sit explicabo
+              culpa, voluptas saepe. Voluptates, exercitationem, est.
             </p>
-
-            <div class="contacts__table-row">
-              <span class="contacts__day">Monday - Friday</span>
-              <span class="contacts__time">8AM - 10PM</span>
-            </div>
-            <div class="contacts__table-row">
-              <span class="contacts__day">Saturday</span>
-              <span class="contacts__time">8AM - 12PM</span>
-            </div>
-            <div class="contacts__table-row">
-              <span class="contacts__day">Sunday</span>
-              <span class="contacts__time">8AM - 10PM</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="contacts__map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.8840785320544!2d-82.49493468465671!3d42.980715479150156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88259e93ea837f03%3A0x9eaf24e841d574ed!2zNDIzOSBMYXBlZXIgUmQsIFBvcnQgSHVyb24sIE1JIDQ4MDYwLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1640107647193!5m2!1sru!2sua"
-            height="450"
-            width="100%"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer__container container">
-        <div class="footer__content">
-          <div class="footer__logo-wrapper">
-            <a href="/" class="logo">
-              <div class="logo__img">
-                <img
-                  src="img/restaurant-logo.svg"
-                  alt="restfood logo"
-                  width="45"
-                  height="45"
-                />
+            <p class="about-us__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Repudiandae repellendus enim velit consequatur nemo, porro inventore
+              dignissimos, atque laboriosam aspernatur eum deleniti sit explicabo
+              culpa, voluptas saepe. Voluptates, exercitationem, est.
+            </p>
+            <p class="about-us__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Repudiandae repellendus enim velit consequatur nemo, porro inventore
+              dignissimos, atque laboriosam aspernatur eum deleniti sit explicabo
+              culpa, voluptas saepe. Voluptates, exercitationem, est.
+            </p>
+            <div class="counter counter__container">
+              <div class="counter__item visitors">
+                <div class="counter__number">
+                  <span data-count="150">0</span>+
+                </div>
+                <p class="counter__text">visitors</p>
               </div>
-            </a>
+              <div class="counter__item feedback">
+                <div class="counter__number">
+                  <span data-count="100">0</span>%
+                </div>
+                <p class="counter__text">positive feedback</p>
+              </div>
+              <div class="counter__item awards">
+                <div class="counter__number">
+                  <span data-count="25">0</span>
+                </div>
+                <p class="counter__text">awards</p>
+              </div>
+            </div>
           </div>
-          <div class="footer__navigation">
-            <nav class="menu">
-              <ul class="menu__list">
-                <li class="links">
-                  <a href="#about-us"> About Us </a>
+
+          <div class="about-us__image-container">
+            <img
+              class="about-us__chief"
+              src="./img/chef-about-section.webp"
+              width="300"
+              height="400"
+              alt="Our chef"
+            />
+            <img
+              class="about-us__decoration"
+              src="./img/about-us-decoration.webp"
+              alt="Our food"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="chefs" class="chefs">
+        <div class="chefs__container container">
+          <div class="section-subtitle">Meet Our Chefs</div>
+          <h2 class="section-title">Our Chefs</h2>
+          <div class="chefs__img-container">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    class="chiefs__person"
+                    src="./img/chef-about-section.webp"
+                    width="100%"
+                    height="auto"
+                    alt="Our chef"
+                  />
+                  <div class="chefs__description">
+                    <ul class="chefs__social-links">
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                      </li>
+                    </ul>
+                    <h3 class="chefs__name">Richard Nauz</h3>
+                    <p class="chefs__position">Food chef</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="chiefs__person"
+                    src="./img/chef-team1.webp"
+                    width="100%"
+                    height="auto"
+                    alt="Our chef"
+                  />
+                  <div class="chefs__description">
+                    <ul class="chefs__social-links">
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                      </li>
+                    </ul>
+                    <h3 class="chefs__name">Jeremy White</h3>
+                    <p class="chefs__position">Food chef</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="chiefs__person"
+                    src="./img/chef-team3.webp"
+                    width="100%"
+                    height="auto"
+                    alt="Our chef"
+                  />
+                  <div class="chefs__description">
+                    <ul class="chefs__social-links">
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                      </li>
+                    </ul>
+                    <h3 class="chefs__name">Olivia Grosh</h3>
+                    <p class="chefs__position">Food chef</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="chiefs__person"
+                    src="./img/chef-team7.webp"
+                    width="100%"
+                    height="auto"
+                    alt="Our chef"
+                  />
+                  <div class="chefs__description">
+                    <ul class="chefs__social-links">
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                      </li>
+                    </ul>
+                    <h3 class="chefs__name">Sofia Mayer</h3>
+                    <p class="chefs__position">Food chef</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="chiefs__person"
+                    src="./img/chef-about-section.webp"
+                    width="100%"
+                    height="auto"
+                    alt="Our chef"
+                  />
+                  <div class="chefs__description">
+                    <ul class="chefs__social-links">
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                      </li>
+                    </ul>
+                    <h3 class="chefs__name">Richard Nauz</h3>
+                    <p class="chefs__position">Food chef</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="chiefs__person"
+                    src="./img/chef-team1.webp"
+                    width="100%"
+                    height="auto"
+                    alt="Our chef"
+                  />
+                  <div class="chefs__description">
+                    <ul class="chefs__social-links">
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                      </li>
+                    </ul>
+                    <h3 class="chefs__name">Jeremy White</h3>
+                    <p class="chefs__position">Food chef</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="chiefs__person"
+                    src="./img/chef-team3.webp"
+                    width="100%"
+                    height="auto"
+                    alt="Our chef"
+                  />
+                  <div class="chefs__description">
+                    <ul class="chefs__social-links">
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                      </li>
+                    </ul>
+                    <h3 class="chefs__name">Olivia Grosh</h3>
+                    <p class="chefs__position">Food chef</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    class="chiefs__person"
+                    src="./img/chef-team7.webp"
+                    width="100%"
+                    height="auto"
+                    alt="Our chef"
+                  />
+                  <div class="chefs__description">
+                    <ul class="chefs__social-links">
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                      </li>
+                      <li class="chefs__social-link-item">
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                      </li>
+                    </ul>
+                    <h3 class="chefs__name">Sofia Mayer</h3>
+                    <p class="chefs__position">Food chef</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="menu">
+        <div class="menu__container container">
+          <div class="section-subtitle">Check out our menu</div>
+          <h2 class="section-title">Our menu</h2>
+          <div class="menu__navigation">
+            <button type="button" class="menu-btn active" data-name="burgers">
+              Burgers
+            </button>
+            <button type="button" class="menu-btn" data-name="pizzas">
+              Pizzas
+            </button>
+            <button type="button" class="menu-btn" data-name="steaks">
+              Steaks
+            </button>
+            <button type="button" class="menu-btn" data-name="pasts">
+              Pasts
+            </button>
+            <button type="button" class="menu-btn" data-name="salads">
+              Salads
+            </button>
+            <button type="button" class="menu-btn" data-name="drinks">
+              Drinks
+            </button>
+          </div>
+          <div class="menu__items-container"></div>
+        </div>
+      </section>
+
+      <section id="contacts" class="contacts">
+        <div class="contacts__container container">
+          <div class="contacts__wrapper">
+            <div class="contacts__content">
+              <div class="section-subtitle">Our Address</div>
+              <h2 class="section-title">Contacts</h2>
+              <ul class="contacts__information-list">
+                <li class="contacts__information-item">
+                  <i class="fas fa-map-marker-alt"></i>4239 Lapeer Rd, Port
+                                                       Hurons, MI 48060
                 </li>
-                <li class="links">
-                  <a href="#chefs"> Chefs </a>
+                <li class="contacts__information-item">
+                  <a href="#"><i class="fas fa-phone"></i>+1 (234) 567-89-01</a>
                 </li>
-                <li class="links">
-                  <a href="#menu"> Menu </a>
+                <li class="contacts__information-item">
+                  <i class="far fa-clock"></i>We are open from 8am
                 </li>
               </ul>
-              <div>
-                <button class="back-to-top" type="button" aria-label="Back to top"></button>
+              <ul class="contacts__social">
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__working-hours">
+              <h3>Opening Hours</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et,
+                inventore hic nulla, provident laudantium voluptate ipsa eligendi
+                commodi mollitia vero animi.
+              </p>
+
+              <div class="contacts__table-row">
+                <span class="contacts__day">Monday - Friday</span>
+                <span class="contacts__time">8AM - 10PM</span>
               </div>
-            </nav>
+              <div class="contacts__table-row">
+                <span class="contacts__day">Saturday</span>
+                <span class="contacts__time">8AM - 12PM</span>
+              </div>
+              <div class="contacts__table-row">
+                <span class="contacts__day">Sunday</span>
+                <span class="contacts__time">8AM - 10PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contacts__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.8840785320544!2d-82.49493468465671!3d42.980715479150156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88259e93ea837f03%3A0x9eaf24e841d574ed!2zNDIzOSBMYXBlZXIgUmQsIFBvcnQgSHVyb24sIE1JIDQ4MDYwLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1640107647193!5m2!1sru!2sua"
+              height="450"
+              width="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__content">
+            <div class="footer__logo-wrapper">
+              <a href="/" class="logo">
+                <div class="logo__img">
+                  <img
+                    src="img/restaurant-logo.svg"
+                    alt="restfood logo"
+                    width="45"
+                    height="45"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="footer__navigation">
+              <nav class="menu">
+                <ul class="menu__list">
+                  <li class="links">
+                    <a href="#about-us"> About Us </a>
+                  </li>
+                  <li class="links">
+                    <a href="#chefs"> Chefs </a>
+                  </li>
+                  <li class="links">
+                    <a href="#menu"> Menu </a>
+                  </li>
+                </ul>
+
+              </nav>
+            </div>
+          </div>
           <div class="footer__author">
             © 2023 - <span id="current-year"></span>
-            <span class="company-name"
-              ><span class="highlighted-text">Rest</span>food</span
+            <span
+              class="company-name"
+            ><span class="highlighted-text">Rest</span>food</span
             >
           </div>
-      </div>
-    </footer>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div>
+    <button class="back-to-top" type="button" aria-label="Back to top"></button>
+  </div>
+</main>
 
-    <script src="https://cdn.jsdelivr.net/gh/bqworks/slider-pro/dist/js/jquery.sliderPro.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+<script src="https://cdn.jsdelivr.net/gh/bqworks/slider-pro/dist/js/jquery.sliderPro.min.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+</body>
 </html>

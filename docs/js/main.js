@@ -187,3 +187,147 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   );
 });
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  // gsap code here!
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+  ScrollSmoother.create({
+    wrapper: "#smooth-wrapper",
+    content: "#smooth-content",
+    smooth: 1.2,
+    effects: true
+  });
+
+  if (ScrollTrigger.isTouch !== 1) {
+    gsap.fromTo(".chefs",
+      { y: 100, opacity: 0.1 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".chefs",
+          start: "top 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none none",
+          scrub: true
+        }
+      });
+
+    gsap.fromTo(".about-us__text-wrapper",
+      { x: -50, y: 100, opacity: 0.8 },
+      {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".about-us__text-wrapper",
+          start: "top 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none none",
+          scrub: true
+        }
+      });
+
+    gsap.fromTo(".about-us__image-container",
+      { x: 50, y: 100, opacity: 0.8 },
+      {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".about-us__image-container",
+          start: "top 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none none",
+          scrub: true
+        }
+      });
+
+    // menu start
+    const buttons = gsap.utils.toArray(".menu__navigation .menu-btn");
+
+    gsap.fromTo(buttons,
+      { y: 60, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.9,
+        ease: "power2.out",
+        stagger: 0.15,
+        scrollTrigger: {
+          trigger: ".menu__navigation",
+          start: "top 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none none"
+        }
+      });
+
+    const menuElements = gsap.utils.toArray(".menu__items-container");
+    gsap.fromTo(menuElements,
+      { y: 40, opacity: 0.4 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: menuElements,
+          start: "top 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none none",
+          scrub: true
+        }
+      });
+    // menu finish
+    //   contacts
+    gsap.fromTo(".contacts__content",
+      { x: -80, y: 100, opacity: 0.4 },
+      {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".contacts__content",
+          start: "top 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none none",
+          scrub: true
+        }
+      });
+
+    gsap.fromTo(".contacts__working-hours",
+      { x: 80, y: 100, opacity: 0.4 },
+      {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".contacts__working-hours",
+          start: "top 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none none",
+          scrub: true
+        }
+      });
+    gsap.fromTo(".contacts__map",
+      { y: 100, opacity: 0.4 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".contacts__map",
+          start: "top 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none none",
+          scrub: true
+        }
+      });
+  //   contacts finish
+  }
+});
